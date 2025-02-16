@@ -1,0 +1,28 @@
+server:
+  port: 5001
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/stockdatabase
+    username: stockuser
+    password: admin
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate:
+        batch_fetch_style: padded
+        default_batch_fetch_size: 50
+        enable_lazy_load_no_trans: true
+        current_session_context_class: org.springframework.orm.hibernate5.SpringSessionContext
+    hibernate:
+      ddl-auto: none
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    open-in-view: true
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: stock-consumer-group
+      auto-offset-reset: earliest
+
