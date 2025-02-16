@@ -56,6 +56,12 @@ public class StockController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
+    @GetMapping("/symbol/{symbol}")
+    public ResponseEntity<List<Stock>> getStocksBySymbol(@PathVariable String symbol) {
+        List<Stock> stocks = stockService.getStocksBySymbol(symbol);
+        return ResponseEntity.ok(stocks);
+    }
+
     /**
      * Creates a new stock.
      *
