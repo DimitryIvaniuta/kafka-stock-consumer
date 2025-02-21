@@ -248,5 +248,8 @@ Received message: Hello, KRaft!
 
 ---
 
-### 🎉 Enjoy building Kafka consumers without Zookeeper using **KRaft** and **Spring Boot**! 🚀
+## 📬 Contact
+
+**Dzmitry Ivaniuta** — [diafter@gmail.com](mailto:diafter@gmail.com) — [GitHub](https://github.com/DimitryIvaniuta)
+
 
